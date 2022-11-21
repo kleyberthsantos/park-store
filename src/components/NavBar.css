@@ -1,8 +1,3 @@
-.icon {
-  width: 8vh;
-  height: 40px;
-}
-
 .customNavBar{
   width: 30vh;
 }
@@ -10,4 +5,9 @@
 #navbackground {
   background-color: rgb(178, 178, 155);
   color:rgb(179, 27, 93);
+}
+
+.cartWidget {
+  width: auto;
+  height: 3.6vh;
 }

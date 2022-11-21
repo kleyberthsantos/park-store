@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './NavBar.css'
-import { IoCartOutline } from "react-icons/io5";
+import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
@@ -28,7 +28,9 @@ const NavBar = () => {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-        <Nav.Link href="#link"><IoCartOutline className="icon"/></Nav.Link>
+        <Nav.Link href="#link" className="icon">
+          <CartWidget />
+        </Nav.Link>
       </Container>
     </Navbar>
   );
