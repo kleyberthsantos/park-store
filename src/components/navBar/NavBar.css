@@ -1,0 +1,24 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.navBarBody {
+  background-image: url('https://rare-gallery.com/uploads/posts/132644-think-positive-hd-saying-typography.jpg');
+  padding: 2vh;
+  height: 8vh;
+  margin: 0vh;
+}
+
+.navText {
+  text-decoration: none;
+  color: rgb(244, 244, 244);
+  text-shadow: 1px 1px 1px rgba(24, 24, 24, 0.8);
+  margin: 9vh;
+}
+
+.cart {
+  font-size: xx-large ;
+  margin-right: 8vh;
+}

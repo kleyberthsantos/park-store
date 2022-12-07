@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+  background: 'https://i.ibb.co/8zbZwN2/6294140.jpg';
 }
 
-.body {
-  height: 93vh;
-  background-color: rgb(243, 242, 238);
-}
 
-.itemlist {
-  color:blue;
-  text-align: center;
+
+body {
+  width: auto;
+  height: 100vh;
+  background-image: url('https://rare-gallery.com/uploads/posts/5376773-cyclist-tree-bike-forest-sport-mountain-bike-bicycle-stunt-cycle-rough-ride-extreme-sport-bmx-nature-outdoors-green-extreme-adventure-downhill-pine-fir-png-images.jpg');
+  background-position: center;
+  background-size: 340vh;
+  background-repeat: no-repeat;
 }

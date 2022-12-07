@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* body {
+  width: auto;
+  height: 100%;
+  background-image: url('https://rare-gallery.com/uploads/posts/5376773-cyclist-tree-bike-forest-sport-mountain-bike-bicycle-stunt-cycle-rough-ride-extreme-sport-bmx-nature-outdoors-green-extreme-adventure-downhill-pine-fir-png-images.jpg');
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+} */
+
+
+.conatiner{
+  max-width: 100vw;
+  width: 40vh;
+  height: 40vh;
+  margin: 2vh;
+  margin-left: 10vh;
+  margin-right: 6vh;
+  display: inline-block;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px !important;
+  box-shadow: 0px 0px 0px 1.5px rgb(134, 134, 103) ;
+}
+
+.card {
+  height: 55vh;
+}
+
+
+/* .card {
+  max-width: 100vh;
+  display: grid;
+  grid-row: auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  grid-gap: 0px;
+    margin: 0 10vh;
+    padding: 0 10vh;
+    position: relative;
+      width: 50vh;
+      height: 300px;
+      margin: 4px;
+} */
+
+
+/* .cardBody {
+  width: 27vh;
+  height: 1vh;
+  border-radius: 8px;
+  border: 2px black;
+  margin-bottom: 1px;
+  text-align: center;
+  height: 15vh !important;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+} */
+
+.imgCard {
+  width: 10vh;
+  height: 25vh;
+  margin: 0px;
+  border-radius: 8px !important;
+  box-shadow: 0px 0px 0px 1.5px rgb(124, 149, 126) ;
+}
+
+.cardTitlle {
+  width: auto;
+  margin: auto;
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.button {
+  text-decoration: none;
+}
+
