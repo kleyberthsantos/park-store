@@ -13,7 +13,7 @@ const ItemListContainer = () => {
   //componentDidMount
     useEffect(() => {
       if (nameCategory) {
-        callFetch(2000, dataProducts.filter(product => product.categoria == nameCategory))
+        callFetch(100, dataProducts.filter(product => product.category === nameCategory))
           .then(response => setProducts(response))
           .catch(err => console.log(err))
       } else {

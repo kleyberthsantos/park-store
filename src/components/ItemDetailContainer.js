@@ -12,10 +12,18 @@ const ItemDitailContainer = () => {
 
   //componentDidMount
     useEffect(() => {
-      callFetch(2000, dataProducts.find(product => product.id == idProduct))
+      if (idProduct){
+        callFetch(2000, dataProducts.find(product => product.id == idProduct))
         .then(response => setProducts(response))
         .catch(err => console.log(err))
-    },[])
+      } else {
+        callFetch(2000, dataProducts)
+        .then(response => setProducts(response))
+        .catch(err => console.log(err))
+      }
+
+      
+    },[idProduct]);
 
   return (
     <>
