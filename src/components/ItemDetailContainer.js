@@ -18,7 +18,7 @@ const ItemDitailContainer = () => {
 
         if (docSnap.exists()) {
           return {
-            id: products.id,
+            id: docSnap.id,
             ...docSnap.data()
           }
         } else {

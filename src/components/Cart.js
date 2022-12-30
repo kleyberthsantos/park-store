@@ -23,7 +23,6 @@ const Cart = () => {
       ctxCart.cartList.length > 0 
       ? ctxCart.cartList.map(products => 
       <li key={products.id}>
-        <img src={products.img} />
       - nombre: {products.name}
       - precio: {products.price}
       - cantidad: {products.quantity}
@@ -34,11 +33,6 @@ const Cart = () => {
     }
     </ul>
 
-    {
-
-    }
-
-
     </>
   ) 
 }
@@ -47,21 +41,21 @@ const Cart = () => {
 export default Cart;
 
 
-
-
-{/*     <>
-      {
-        ctxCart.cartList.length > 0 &&
-          ctxCart.cartList.map(products =>  
-            <div key={products.id}>
-              <>
-              - nombre: {products.name}
-              - precio: {products.price}
-              - cantidad: {products.quantity}
-              - Sub-total: ${products.quantity * products.price}
-              <button onClick={() => ctxCart.deleteProduct(products.id)}>Eliminar este producto</button>
-              </>
-            </div>  
-          )        
-      }
-    </> */}
+/* {
+  <>
+  {
+    ctxCart.cartList.length > 0 &&
+      ctxCart.cartList.map(products =>  
+        <div key={products.id}>
+          <><img src={products.img} />
+          - nombre: {products.name}
+          - precio: {products.price}
+          - cantidad: {products.quantity}
+          - Sub-total: ${products.quantity * products.price}
+          <button onClick={() => ctxCart.deleteProduct(products.id)}>Eliminar este producto</button>
+          </>
+        </div>  
+      )        
+  }
+</>
+} */

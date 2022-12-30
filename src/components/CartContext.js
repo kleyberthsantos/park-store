@@ -7,7 +7,9 @@ const CartContextProvider = ({children}) => {
 
   //agregar elementos al carrito
   const addToCart = (products, quantity) => {
-    let existsProduct = cartList.find(ticket => ticket.id === products.id)
+/*     console.log("products: ",products)
+    console.log("quantity: ",quantity) */
+    let existsProduct = cartList.find( products => products.id === products.id )
     if (existsProduct === undefined) {
     setCartList ([
       ...cartList,
@@ -17,7 +19,7 @@ const CartContextProvider = ({children}) => {
         name: products.name,
         price: products.price,
         quantity: quantity
-      }
+      } 
     ]);
     } else {
       existsProduct.quantity += quantity;
@@ -25,6 +27,7 @@ const CartContextProvider = ({children}) => {
         ...cartList
       ]);
     }
+
   }
   
   //borrar elemento en el carrito
