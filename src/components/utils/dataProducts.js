@@ -7,7 +7,7 @@ export const dataProducts = [
     category:'bikepark',
     price: 6000
   },
- {
+  {
     id: 2,
     name: 'Acceso más 1 traslado a la zona de descenso',
     details:'Entrada con acceso al bikepark con una subida en camioneta',
