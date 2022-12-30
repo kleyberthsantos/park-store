@@ -33,6 +33,15 @@ const Cart = () => {
     }
     </ul>
 
+    {/* <h2> Carrito </h2>
+      <ul>
+        {
+          ctxCart.cartList.length === 0
+          ? <p>carro sin productos</p>
+          : ctxCart.cartList.map(products => <li key={products.id} > {products.name} </li>)
+        }
+      </ul> */}
+
     </>
   ) 
 }

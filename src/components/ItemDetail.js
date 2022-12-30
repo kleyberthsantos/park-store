@@ -7,14 +7,15 @@ import { CartContext } from './CartContext';
 const ItemDetail = ({ products }) => {
   const [ItemCounter, setItemCounter] = useState (0);
 
-  const ctxCart = useContext(CartContext);
-  //const { addToCart } = useContext (CartContext);
+  //const ctxCart = useContext(CartContext);
+  const { addToCart } = useContext (CartContext);
 
   const onAdd = (quantity) =>{
     alert('Seleccionaste ' + quantity + ' ticket/s');
     setItemCounter(quantity);
     //ejecutar la función global para agregar products al cart
-    ctxCart.addToCart(products, quantity);
+    //ctxCart.addToCart(products, quantity);
+    addToCart(products, quantity);
   }
   return (
     <>

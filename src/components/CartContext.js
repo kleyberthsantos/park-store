@@ -7,9 +7,9 @@ const CartContextProvider = ({children}) => {
 
   //agregar elementos al carrito
   const addToCart = (products, quantity) => {
-/*     console.log("products: ",products)
-    console.log("quantity: ",quantity) */
-    let existsProduct = cartList.find( products => products.id === products.id )
+    //console.log("products: ",products)
+    //console.log("quantity: ",quantity)
+    let existsProduct = cartList.find( tickets => tickets.id === products.id )
     if (existsProduct === undefined) {
     setCartList ([
       ...cartList,
@@ -40,7 +40,6 @@ const CartContextProvider = ({children}) => {
   const deleteAll = () => {
     setCartList([]);
   }
-
 
   //Calculo total por producto
   const sumPerProduct = (id) => {
