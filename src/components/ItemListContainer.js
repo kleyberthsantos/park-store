@@ -1,9 +1,11 @@
 //import FontPage from "./landingPages/FontPage";
+/* import { dataProducts } from "./utils/dataProducts";
+import { callFetch } from "./utils/callFetch"; */
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { dataProducts } from "./utils/dataProducts";
-import { callFetch } from "./utils/callFetch";
 import ItemList from "./ItemList";
+import { db } from './utils/firebaseConfig';
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 
 
 const ItemListContainer = () => {
@@ -12,17 +14,26 @@ const ItemListContainer = () => {
 
   //componentDidMount
     useEffect(() => {
-      if (nameCategory) {
-        callFetch(100, dataProducts.filter(product => product.category === nameCategory))
-          .then(response => setProducts(response))
-          .catch(err => console.log(err))
-      } else {
-        callFetch(2000, dataProducts)
-        .then(response => setProducts(response))
-        .catch(err => console.log(err))
+      const firebaseFetch = async() => {
+        let q;
+        if (nameCategory) {
+          q = query(collection(db, "products"), where('category', '==', nameCategory))
+        } else {
+          q = query(collection(db, "products"), orderBy('category'));
+        }
+        
+        const querySnapshot = await getDocs(q);
+          const dataProducts = querySnapshot.docs.map(products => ({
+            id: products.id,
+            ...products.data()
+          }))
+          return dataProducts;
       }
+      firebaseFetch()
+        .then(result => setProducts(result))
+        .catch(err => console.log(err))
+    },[nameCategory]);
 
-    },[])
 
   return (
     <>

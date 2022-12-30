@@ -12,11 +12,33 @@ const Cart = () => {
       <button>ir a comprar</button>
     </Link>
     <h1>Productos seleccionados</h1>
+    {
+      (ctxCart.cartList.length > 0)
+      ? <button onClick={ctxCart.deleteAll }>Eliminar todo</button>
+      : <h5>Tu carrito está vacio</h5>
+    }
 
-    <ul>
+    <cart>
+      {
+        ctxCart.cartList.length > 0 &&
+          ctxCart.cartList.map(products =>
+            <div key={products.id} id={products.id}>
+              - nombre: {products.name}
+              - precio: {products.price}
+              - cantidad: {products.quantity}
+              - Sub-total: ${products.quantity * products.price}
+              <button onClick={() => ctxCart.deleteProduct(products.id)}>Eliminar este producto</button>
+            </div>
+            )
+      }
+    </cart>
+
+
+{/*     <ul>
     {
       ctxCart.cartList.length > 0 
-      ? ctxCart.cartList.map(products => <li key={products.id}>
+      ? ctxCart.cartList.map(products => 
+      <li key={products.id}>
       - nombre: {products.name}
       - precio: {products.price}
       - cantidad: {products.quantity}
@@ -25,13 +47,13 @@ const Cart = () => {
       </li>)
       : null
     }
-    </ul> 
+    </ul>  */}
 
     {
-      (ctxCart.cartList.length !== 0)
-      ? <button onClick={ctxCart.deleteAll }>Eliminar todo</button>
-      : <h5>Tu carrito está vacio</h5>
+
     }
+
+
     </>
   ) 
 }

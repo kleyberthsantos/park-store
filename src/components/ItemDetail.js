@@ -19,6 +19,7 @@ const ItemDetail = ({ products }) => {
   return (
     <>
       <div>
+        {/* <img src={products.img}/> */}
         <h3> {products.name} </h3>
         <p> {products.details} </p>
         <h5> ${products.price} </h5>
