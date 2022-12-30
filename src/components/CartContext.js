@@ -13,6 +13,7 @@ const CartContextProvider = ({children}) => {
       ...cartList,
       {
         id: products.id,
+        img: products.img,
         name: products.name,
         price: products.price,
         quantity: quantity
@@ -20,7 +21,9 @@ const CartContextProvider = ({children}) => {
     ]);
     } else {
       existsProduct.quantity += quantity;
-      setCartList([...cartList]);
+      setCartList([
+        ...cartList
+      ]);
     }
   }
   
