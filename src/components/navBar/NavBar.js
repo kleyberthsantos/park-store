@@ -13,14 +13,14 @@ const navBar = () => {
       <Navbar className='navBarBody' expand="lg">
       <Container>
         <Navbar.Brand>
-          <Link to='/' className='navText'>Palmilla Park</Link>
+          <Link to='/' className='navText'> <img src="https://i.ibb.co/FVJwCVM/logo-Park-Nav.png" alt="logo-Park-Nav" className='logo'/> </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Link to='/category/bikepark' className='navText'>Bike Park</Link>
-            <Link to='/category/padel' className='navText'>Padel</Link>
-            <Link to='/category/training' className='navText'>Trekking</Link>
+            <Link to='/category/bikepark' className='navText'>BIKE PARK</Link>
+            <Link to='/category/padel' className='navText'>PADEL</Link>
+            <Link to='/category/training' className='navText'>TREKKING</Link>
           </Nav>
           <Navbar.Brand>
           <Link to='/cart' className='navText'><CartWidget/></Link>

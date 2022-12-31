@@ -2,16 +2,161 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: 'https://i.ibb.co/8zbZwN2/6294140.jpg';
+}
+
+.appContainer {
+  width: 100%;
+  height: auto;
+  background-image: url('https://i.ibb.co/qkX7KJD/homebg-Park.png');
+  background-color: rgba(117, 151, 68, 0.939);
+  background-position: center;
+  background-size:cover;
+  background-repeat: repeat;
+}
+
+.navBarBody {
+  background-position: center;
+  background-size: 110vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgb(212, 206, 207) 1%, rgba(185, 174, 45, 0.846) 45%, rgba(26, 26, 26, 0.687) 100%);
+  padding: 2vh;
+  height: 10vh;
+  margin: 0vh;
+}
+
+.logo {
+  width: 180px;
+  margin-top: 18px;
+}
+
+.navText {
+  text-decoration: none;
+  color: rgba(30, 30, 30, 0.672);
+  text-shadow: 0.5px 0.5px 0.5px  rgba(24, 24, 24, 0.8);
+  margin: 7vh;
+  font-size: 25px;
+}
+
+.cart {
+  font-size: xx-large ;
+  margin-right: 8vh;
 }
 
 
+.card {
+  height: 55vh;
+  border-radius: 880px 980px 560px 960px !important;
+  background-color: blanchedalmond;
+}
 
-body {
-  width: auto;
+.itemListStyle {
+  display: inline-block;
+  width: 100vh;
+  height: 10vh auto;
+  font-size: 3vh;
+  margin-left: 12.5%;
+  margin-right: 10%;
+}
+
+.conatiner{
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 40vh;
   height: 100vh;
-  /* background-image: url('https://rare-gallery.com/uploads/posts/5376773-cyclist-tree-bike-forest-sport-mountain-bike-bicycle-stunt-cycle-rough-ride-extreme-sport-bmx-nature-outdoors-green-extreme-adventure-downhill-pine-fir-png-images.jpg'); */
-  background-position: center;
-  background-size: 340vh;
-  background-repeat: no-repeat;
+  margin: 1vh;
+  /* display: inline-block; */
+  margin: 8vh;
+  align-items: center;
+  text-align: center;
+}
+
+.imgCard {
+  width: 10vh;
+  height: 55vh;
+  margin: 0px;
+  border-radius: 280px 380px 460px 460px !important;
+  box-shadow: black;
+}
+
+.cardTitlle {
+  width: 50vh;
+  height: 5vh;
+  margin: auto;
+  text-decoration: none;
+}
+
+.butonCard {
+  background-color: rgb(236, 251, 19);
+  font-size: 20px;
+  color: black;
+  border: 0px;
+  border-radius: 20px;
+  width: 220px;
+  height: 50px;
+}
+
+.textButton {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.ticketIcon {
+  width: 30px;
+}
+
+.imgDetail {
+  width: 50vh;
+  height: 55vh;
+  margin: 2vh;
+  margin-top: 2vh;
+  margin-left: 37%;
+  margin-right: 10%;
+  border-radius: 280px 380px 460px 460px !important;
+  box-shadow: black;
+}
+
+.detail{
+  margin-left: 23%;
+  margin-right: 10%;
+  width: 75vh;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color: rgba(21, 0, 255, 0.815);
+}
+
+.counterStyle {
+  display: flex;
+  flex-direction: row;
+  margin: 2vh;
+  padding: 2vh;
+}
+
+.butonCount {
+  background-color: rgb(236, 251, 19);
+  font-size: 20px;
+  color: black;
+  border: 0px;
+  border-radius: 20px;
+  width: 165px;
+  height: 50px;
+  margin: 0.5vh;
+  
+}
+
+.qtySelect {
+  width: 17px;
+  height: 50px;
+  margin: 0.5vh;
+}
+
+.cartStyle {
+  width: 100%;
+  height: 90vh;
+}
+
+.cartView {
+/*   display: inline-block; */
+  /* flex-direction: row; */
+  margin: 2vh;
+  padding: 2vh;
 }

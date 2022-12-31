@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {useState} from "react";
 import {useContext} from "react";
 import { CartContext } from './CartContext';
+import '../App.css';
 
 const ItemDetail = ({ products }) => {
   const [ItemCounter, setItemCounter] = useState (0);
@@ -18,19 +19,26 @@ const ItemDetail = ({ products }) => {
     addToCart(products, quantity);
   }
   return (
-    <>
-      <div>
-        {/* <img src={products.img}/> */}
-        <h3> {products.name} </h3>
-        <p> {products.details} </p>
+
+        <itemDetailView className='itemListStyle'>
+        
+        <img className="imgDetail" src={products.img}/ >
+        <div className='detail'>
+        <h2> {products.name} </h2>
+        <h4> {products.details} </h4>
         <h5> ${products.price} </h5>
         {
           ItemCounter === 0
           ? <ItemCount stock={products.initial} onAdd={onAdd} />
-          : <Link to='/cart'><button>CheckOut</button></Link>
+          : <button className="butonCard">
+              <Link className='textButton' to='/cart'>CheckOut <img src="https://i.ibb.co/T2hrr1p/boletos.png" className='ticketIcon' /></Link>
+            </button>
         }
-      </div>
-    </>
+        </div>
+        
+        </itemDetailView>
+      
+    
   ) 
 }
 

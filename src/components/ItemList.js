@@ -1,5 +1,6 @@
 import Item from "./Item";
-import './landingPages/landingPages.css';
+import '../App.css';
+/* import './landingPages/landingPages.css'; */
 
 
 const ItemList = (props) => {

@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import { db } from './utils/firebaseConfig';
 import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
-
+import '../App.css';
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState ([]);
@@ -36,11 +36,9 @@ const ItemListContainer = () => {
 
 
   return (
-    <>
-      
-      {/* < FontPage /> */}
+    <div className='itemListStyle' >
       <ItemList products={products} />
-    </>
+    </div>
   )
 }
 
