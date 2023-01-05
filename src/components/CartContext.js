@@ -5,6 +5,13 @@ export const CartContext = createContext();
 const CartContextProvider = ({children}) => {
   const [cartList, setCartList] = useState([]);
 
+    //Muestra cantidad de productos en el carrito del navbar
+      const counterProducts = () => {
+      let numProducts = cartList.map(product => product.quantity);
+      return numProducts.reduce(((previousValue, currentValue) => previousValue + currentValue), null ); //null para no mostrar el 0 en el carrito
+    }
+
+
   //agregar elementos al carrito
   const addToCart = (products, quantity) => {
     //console.log("products: ",products)
@@ -44,13 +51,14 @@ const CartContextProvider = ({children}) => {
   //Calculo total por producto
   const sumPerProduct = (id) => {
     let index = cartList.map(product => product.id).indexOf(id);
-    return index = cartList[index].price * cartList[index].quantity; 
-    /* return cartList.reduce((prev, act) => prev + act.quantity * act.price, 0) */
+    return index = cartList[index].price * cartList[index].quantity;
   }
 
-  const counterProducts = () => {
-    let numProducts = cartList.map(product => product.quantity);
-    return numProducts.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+
+  //Calculo total carrito
+  const totalCartToPay = () => {
+    let totalPay = cartList.map(product => sumPerProduct(product.id));
+    return totalPay.reduce((previousValue, currentValue) => previousValue + currentValue);
   }
 
   return (
@@ -60,7 +68,8 @@ const CartContextProvider = ({children}) => {
       deleteProduct, 
       deleteAll,
       sumPerProduct,
-      counterProducts
+      counterProducts,
+      totalCartToPay
       }}>
       {children}
     </CartContext.Provider>

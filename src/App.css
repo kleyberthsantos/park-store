@@ -37,12 +37,6 @@
   font-size: 25px;
 }
 
-.cart {
-  font-size: xx-large ;
-  margin-right: 8vh;
-}
-
-
 .card {
   height: 55vh;
   border-radius: 880px 980px 560px 960px !important;
@@ -140,7 +134,7 @@
   width: 165px;
   height: 50px;
   margin: 0.5vh;
-  
+
 }
 
 .qtySelect {

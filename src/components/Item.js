@@ -1,8 +1,6 @@
 import '../App.css';
 import {Link} from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import  {IoTicketOutline}  from 'react-icons/fa';
 
 
 const Item = (props) => {

@@ -9,10 +9,14 @@ const CartWidget = () => {
   const widgetList = useContext(CartContext);
 
   return (
-    <>
+    <cartWidget className='cartSpaceNav'>
+      <numberProductsInCart className='qtyProductsCart'>
+        <cartQty className='numberInCatWidget' display='hidden'>
+          { widgetList.counterProducts() }
+        </cartQty>
+      </numberProductsInCart>
       <BsCart4 className="cart"/>
-      { widgetList.counterProducts() }
-    </>
+    </cartWidget>
   )
 }
 

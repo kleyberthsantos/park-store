@@ -19,20 +19,40 @@ const Cart = () => {
 
     <div className='cartView'>
     {
-      ctxCart.cartList.length > 0 
+      ctxCart.cartList.length > 0
       ? ctxCart.cartList.map(products => 
       <selectProduct key={products.id}>
       <h5> {products.name} </h5>
       <h5>precio: {products.price}</h5>
       <h5>cantidad: {products.quantity}</h5>
-      <h5>Sub-total: ${products.quantity * products.price}</h5>
+      <h5>Sub-total: ${ctxCart.sumPerProduct(products.id)}</h5>
       <button className="butonCard" onClick={() => ctxCart.deleteProduct(products.id)}>Eliminar este producto</button>
       <hr/>
       </selectProduct>
       )
       : null
     }
-    </div>    
+    </div>
+    {/* <div>
+      {
+        ctxCart.cartList.length > 0 && ctxCart.cartList.map(products =>
+          <selectProducts key={products.id}>
+            <h5> {products.name} </h5>
+            <h5>precio: {products.price}</h5>
+            <h5>cantidad: {products.quantity}</h5>
+            <h5>Sub-total: ${ctxCart.sumPerProduct(products.id)}</h5>
+            <button className="butonCard" onClick={() => ctxCart.deleteProduct(products.id)}>Eliminar este producto</button>
+            <hr/>
+          </selectProducts>
+
+          )
+      }
+    </div> */}
+    
+    
+    
+    
+ 
     
     <div className='cartView'>
       {
@@ -40,6 +60,15 @@ const Cart = () => {
       ? <button className="butonCard" onClick={ctxCart.deleteAll }>Limpiar carrito</button>
       : <h2>Tu carrito está vacio</h2>
     }
+    </div>
+
+    <div>
+      {
+        ctxCart.cartList.length > 0 &&
+        <total>
+          <h2> Total: ${ctxCart.totalCartToPay()} </h2>
+        </total>
+      }
     </div>
     
     </cartView>

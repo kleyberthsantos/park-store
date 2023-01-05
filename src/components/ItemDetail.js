@@ -15,7 +15,6 @@ const ItemDetail = ({ products }) => {
     alert('Seleccionaste ' + quantity + ' ticket/s');
     setItemCounter(quantity);
     //ejecutar la función global para agregar products al cart
-    //ctxCart.addToCart(products, quantity);
     addToCart(products, quantity);
   }
   return (
