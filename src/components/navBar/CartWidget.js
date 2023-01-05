@@ -11,9 +11,7 @@ const CartWidget = () => {
   return (
     <cartWidget className='cartSpaceNav'>
       <numberProductsInCart className='qtyProductsCart'>
-        <cartQty className='numberInCatWidget' display='hidden'>
           { widgetList.counterProducts() }
-        </cartQty>
       </numberProductsInCart>
       <BsCart4 className="cart"/>
     </cartWidget>

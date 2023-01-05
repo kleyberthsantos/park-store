@@ -8,7 +8,9 @@ const CartContextProvider = ({children}) => {
     //Muestra cantidad de productos en el carrito del navbar
       const counterProducts = () => {
       let numProducts = cartList.map(product => product.quantity);
-      return numProducts.reduce(((previousValue, currentValue) => previousValue + currentValue), null ); //null para no mostrar el 0 en el carrito
+      return numProducts.reduce(((previousValue, currentValue) => previousValue + currentValue), 
+      null); 
+      //null para no mostrar el 0 en el carrito
     }
 
 

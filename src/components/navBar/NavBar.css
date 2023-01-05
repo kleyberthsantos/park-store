@@ -1,31 +1,31 @@
-/* * {
+* {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
 .navBarBody {
-  background-image: url('https://rare-gallery.com/uploads/posts/132644-think-positive-hd-saying-typography.jpg');
+  background-position: center;
+  background-size: 110vh;
+  background-repeat: no-repeat;
+  background: linear-gradient(90deg, rgb(212, 206, 207) 1%, rgba(185, 174, 45, 0.846) 45%, rgba(26, 26, 26, 0.687) 100%);
   padding: 2vh;
-  height: 8vh;
+  height: 9vh;
   margin: 0vh;
+}
+
+.logo {
+  width: 180px;
+  margin-top: 18px;
 }
 
 .navText {
   text-decoration: none;
-  color: rgb(244, 244, 244);
-  text-shadow: 1px 1px 1px rgba(24, 24, 24, 0.8);
-  margin: 9vh;
+  color: rgba(30, 30, 30, 0.672);
+  text-shadow: 0.5px 0.5px 0.5px  rgba(24, 24, 24, 0.8);
+  margin: 7vh;
+  font-size: 20px;
 }
-
-.cart {
-  font-size: xx-large ;
-  margin-right: 8vh;
-}
- */
-
-/* hjklw50ik */
-
 
 .cartSpaceNav {
   display: flex;
@@ -33,27 +33,19 @@
 }
 
 .cart {
-  font-size: x-large ;
+  font-size: xx-large;
   margin-right: 0vh;
 }
 
-.numberInCatWidget {
-  background-color: rgba(255, 0, 0, 0.797);
-  border-radius: 200px;
-  margin-left: 7px;
-  width: 10px;
-}
-
 .qtyProductsCart {
+  background-color: rgba(255, 0, 0, 0.797);
+  -webkit-border-radius: 180px;
+  -moz-border-radius: 180px;
+  border-radius: 180px;
   color: rgb(255, 255, 255);
-  font-size: 12px;
-  margin-bottom: -9.5px;
-}
-
-#viewNumber {
-  display: block;
-}
-
-#hiddenNumber {
-  display: hidden ;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: -13px;
+  margin-left: 9.2px;
+  width: 20px;
 }

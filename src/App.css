@@ -14,29 +14,6 @@
   background-repeat: repeat;
 }
 
-.navBarBody {
-  background-position: center;
-  background-size: 110vh;
-  background-repeat: no-repeat;
-  background: linear-gradient(90deg, rgb(212, 206, 207) 1%, rgba(185, 174, 45, 0.846) 45%, rgba(26, 26, 26, 0.687) 100%);
-  padding: 2vh;
-  height: 10vh;
-  margin: 0vh;
-}
-
-.logo {
-  width: 180px;
-  margin-top: 18px;
-}
-
-.navText {
-  text-decoration: none;
-  color: rgba(30, 30, 30, 0.672);
-  text-shadow: 0.5px 0.5px 0.5px  rgba(24, 24, 24, 0.8);
-  margin: 7vh;
-  font-size: 25px;
-}
-
 .card {
   height: 55vh;
   border-radius: 880px 980px 560px 960px !important;
@@ -112,6 +89,7 @@
 .detail{
   margin-left: 23%;
   margin-right: 10%;
+  border-radius: 15px;
   width: 75vh;
   color: rgb(255, 255, 255);
   text-align: center;
