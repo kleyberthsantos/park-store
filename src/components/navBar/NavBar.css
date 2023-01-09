@@ -8,10 +8,12 @@
   background-position: center;
   background-size: 110vh;
   background-repeat: no-repeat;
-  background: linear-gradient(90deg, rgb(212, 206, 207) 1%, rgba(185, 174, 45, 0.846) 45%, rgba(26, 26, 26, 0.687) 100%);
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.643) 1%, #db589183 45%, rgba(232, 242, 241, 0.687) 100%); */
+  background-color: #b8b08e;
   padding: 2vh;
   height: 9vh;
   margin: 0vh;
+  font-family: Geogrotesque,sans-serif;
 }
 
 .logo {
@@ -21,7 +23,8 @@
 
 .navText {
   text-decoration: none;
-  color: rgba(30, 30, 30, 0.672);
+/*   color: rgba(30, 30, 30, 0.672); */
+color: rgb(255, 255, 255);
   text-shadow: 0.5px 0.5px 0.5px  rgba(24, 24, 24, 0.8);
   margin: 7vh;
   font-size: 20px;

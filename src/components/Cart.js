@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { collection, serverTimestamp } from "firebase/firestore";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "./utils/firebaseConfig";
+import swal from 'sweetalert2'; 
 import '../App.css';
 
 
@@ -28,8 +29,8 @@ const Cart = () => {
       })),
       total: ctxCart.totalCartToPay()
     }
-    console.log(dataOrder)
 
+    //envia orden en firebase
     const createOrder = async () =>{
       const createIdPerOrder = doc(collection(db, "pedido"))
       await setDoc(createIdPerOrder, dataOrder);
@@ -37,7 +38,15 @@ const Cart = () => {
     }
     createOrder()
       .then(result => {
-        alert("Has creado tu pedido con el siguiente id: " + (result.id))
+        swal.fire({
+          title: '<strong>HTML <u>example</u></strong>',
+          icon: 'success',
+          detalle: 'Has creado tu pedido con el siguiente id: ' + (result.id),
+          focusConfirm: false,
+          confirmButtonText:
+            '<i class="fa fa-thumbs-up"></i> Great!',
+          confirmButtonAriaLabel: 'Thumbs up, great!'
+        })
         //limpiar el carrito posterior al pedido realizado
         ctxCart.deleteAll()
       })
@@ -47,51 +56,50 @@ const Cart = () => {
 
   return (
     <cartView className="cartStyle">
-    {
-      (ctxCart.cartList.length > 0)
-      ? <h1>Productos seleccionados</h1>
-      : <button className="butonCard" ><Link className='textButton' to='/'>Ir a comprar</Link></button>
-    }
-
-    <div className='cartView'>
-    {
-      ctxCart.cartList.length > 0
-      ? ctxCart.cartList.map(products => 
-      <selectProduct key={products.id}>
-      <h5> {products.name} </h5>
-      <h5>precio: {products.price}</h5>
-      <h5>cantidad: {products.quantity}</h5>
-      <h5>Sub-total: ${ctxCart.sumPerProduct(products.id)}</h5>
-      <button className="butonCard" onClick={() => ctxCart.deleteProduct(products.id)}>Eliminar este producto</button>
-      <hr/>
-      </selectProduct>
-      )
-      : null
-    }
-    </div>
-
-    <div className='cartView'>
+      
       {
-      (ctxCart.cartList.length > 0)
-      ? <button className="butonCard" onClick={ctxCart.deleteAll }>Limpiar carrito</button>
-      : <h2>Tu carrito está vacio</h2>
-    }
-    </div>
-
-    <div>
-      {
-        ctxCart.cartList.length > 0 &&
-        <total>
-          <h2> Total a pagar: ${ctxCart.totalCartToPay()} </h2>
-        </total>
+        (ctxCart.cartList.length > 0)
+        ? <h1 className='poductsSelected'>Productos seleccionados</h1>
+        : <button className="goToBuy" ><Link className='textButton' to='/'>Compra tu ticket</Link></button>
       }
-    </div>
-    
-    <div>
-      <button className="butonCard" onClick={orderFinish}>Finalizar pedido</button>
-    </div>
+      <div className='cartView'>
+      {
+        ctxCart.cartList.length > 0
+        ? ctxCart.cartList.map(products => 
+        <selectProduct key={products.id}>
+        <h5> {products.name} </h5>
+        <h5>precio: {products.price}</h5>
+        <h5>cantidad: {products.quantity}</h5>
+        <h5>Sub-total: ${ctxCart.sumPerProduct(products.id)}</h5>
+        <button className="butonCard" onClick={() => ctxCart.deleteProduct(products.id)}>Eliminar este ticket</button>
+        <hr/>
+        </selectProduct>
+        )
+        : null
+      }
+      </div>
 
+      <div className='cartGoToBuy'>
+        {
+        (ctxCart.cartList.length > 0)
+          ? <button className="butonCard" onClick={ctxCart.deleteAll }>Limpiar carrito</button>
+          : <img src="https://i.ibb.co/Ptt9Lfc/quiero-comprar.jpg" alt="quiero-comprar" className='memeCartEmpty'></img>
+            
+        }
 
+      </div>
+
+      <div className='payToTotal'>
+        {
+          ctxCart.cartList.length > 0 &&
+          <total>
+            <h2> Total a pagar: ${ctxCart.totalCartToPay()} </h2>
+            <div>
+              <button className="butonCard" onClick={orderFinish}>Finalizar pedido</button>
+            </div>
+          </total>
+        }
+      </div>
     </cartView>
   ) 
 }

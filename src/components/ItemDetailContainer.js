@@ -4,8 +4,6 @@ import { useParams } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from './utils/firebaseConfig';
 import '../App.css';
-/* import { dataProducts } from "./utils/dataProducts";
-import { callFetch } from "./utils/callFetch"; */
 
 
 const ItemDitailContainer = () => {

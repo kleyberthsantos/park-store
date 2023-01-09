@@ -8,7 +8,8 @@
   width: 100%;
   height: auto;
   background-image: url('https://i.ibb.co/qkX7KJD/homebg-Park.png');
-  background-color: rgba(117, 151, 68, 0.939);
+  /* background-color: rgb(232, 37, 86); */
+  background-color: rgb(96, 116, 93);
   background-position: center;
   background-size:cover;
   background-repeat: repeat;
@@ -23,7 +24,16 @@
 .itemListStyle {
   display: inline-block;
   width: 100vh;
-  height: 10vh auto;
+  height: auto;
+  font-size: 3vh;
+  margin-left: 12.5%;
+  margin-right: 10%;
+}
+
+.itemListStyleView {
+  display: inline-block;
+  width: 100vh;
+  height: 85.6vh;
   font-size: 3vh;
   margin-left: 12.5%;
   margin-right: 10%;
@@ -35,7 +45,6 @@
   width: 40vh;
   height: 100vh;
   margin: 1vh;
-  /* display: inline-block; */
   margin: 8vh;
   align-items: center;
   text-align: center;
@@ -57,9 +66,10 @@
 }
 
 .butonCard {
-  background-color: rgb(236, 251, 19);
+  /* background-color: rgb(236, 251, 19); */
+  background-color: rgb(202, 34, 34);
+  color: rgb(255, 255, 255);
   font-size: 20px;
-  color: black;
   border: 0px;
   border-radius: 20px;
   width: 220px;
@@ -67,8 +77,9 @@
 }
 
 .textButton {
-  color: rgb(0, 0, 0);
+  /* color: rgb(0, 0, 0); */
   text-decoration: none;
+  color: rgb(255, 255, 255)  
 }
 
 .ticketIcon {
@@ -91,9 +102,9 @@
   margin-right: 10%;
   border-radius: 15px;
   width: 75vh;
-  color: rgb(255, 255, 255);
+  color:  #fff067;
   text-align: center;
-  background-color: rgba(21, 0, 255, 0.815);
+  background-color: rgba(133, 144, 168, 0.756);
 }
 
 .counterStyle {
@@ -123,12 +134,79 @@
 
 .cartStyle {
   width: 100%;
-  height: 90vh;
+  height: auto;
+  color: #24353f
 }
 
 .cartView {
-/*   display: inline-block; */
-  /* flex-direction: row; */
-  margin: 2vh;
-  padding: 2vh;
+  width: auto;
+  height: auto;
+  align-items: center;
+  background-color: rgba(216, 157, 157, 0.167);
+}
+
+.poductsSelected {
+  text-align: center;
+  color: rgb(254, 254, 254);
+}
+
+.goToBuy {
+  background-color: rgb(236, 251, 19);
+  font-size: 20px;
+  color: black;
+  border: 0px;
+  border-radius: 20px;
+  width: 165px;
+  height: 50px;
+  margin: 0.5vh;
+  margin: 15px;
+  margin-top: 50px;
+  margin-left: 45%;
+  margin-right: 40%;
+}
+
+.cartGoToBuy {
+  width: auto;
+  height: 73.2vh;
+  text-align: center;
+  color: rgb(253, 253, 253);
+}
+
+.payToTotal {
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  background-color: rgba(133, 144, 168, 0.756);
+  color: white;
+}
+
+
+
+.footer {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0em 5em;
+  color: #ffffff;
+  width: 100%;
+  bottom: 0; 
+}
+
+.footer-text {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: .5;
+  color: #ffffff;
+}
+
+.footer #copyright a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.footer #copyright a:hover{
+  color: rgb(173, 173, 173)
 }
