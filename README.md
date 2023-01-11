@@ -11,6 +11,14 @@
 Park Store corresponde al proyecto final del curso de React Js en la carrera de Front-End developer de Coder House.
 Este proyecto es ecommerce que vende tickets para accesos a un parque deportivo.
 
+## Deployment
+
+To deploy this project run
+
+```bash
+  https://park-store-5ojj-qw0dylmm3-kleyberthsantos.vercel.app/
+```
+
 ## Uso del proyecto
 
 Clonar el repositorio de GitHub:
@@ -24,3 +32,9 @@ npm install
 
 Para correr el proyecto:
 npm run dev
+
+
+## Autor
+
+- [@kleyberthsantos](https://github.com/kleyberthsantos)
+
