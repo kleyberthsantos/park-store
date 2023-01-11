@@ -39,13 +39,11 @@ const Cart = () => {
     createOrder()
       .then(result => {
         swal.fire({
-          title: '<strong>HTML <u>example</u></strong>',
           icon: 'success',
-          detalle: 'Has creado tu pedido con el siguiente id: ' + (result.id),
+          title: 'Tu compra fue realizada con éxito con id: ' + (result.id),
           focusConfirm: false,
           confirmButtonText:
-            '<i class="fa fa-thumbs-up"></i> Great!',
-          confirmButtonAriaLabel: 'Thumbs up, great!'
+            '<i class="fa fa-thumbs-up"></i> Nos vemos!',
         })
         //limpiar el carrito posterior al pedido realizado
         ctxCart.deleteAll()

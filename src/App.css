@@ -9,7 +9,8 @@
   height: auto;
   background-image: url('https://i.ibb.co/qkX7KJD/homebg-Park.png');
   /* background-color: rgb(232, 37, 86); */
-  background-color: rgb(96, 116, 93);
+  /* background-color: rgb(96, 116, 93); */
+  background-color: rgb(38, 22, 220);
   background-position: center;
   background-size:cover;
   background-repeat: repeat;
@@ -142,7 +143,12 @@
   width: auto;
   height: auto;
   align-items: center;
-  background-color: rgba(216, 157, 157, 0.167);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* background-color: rgba(216, 157, 157, 0.167); */
+  background-color: rgba(255, 255, 255, 0.549);
+  color: rgb(0, 0, 0);
 }
 
 .poductsSelected {
@@ -169,15 +175,16 @@
   width: auto;
   height: 73.2vh;
   text-align: center;
-  color: rgb(253, 253, 253);
+  margin: 5vh;
+  /* color: rgb(253, 253, 253); */
 }
 
 .payToTotal {
   text-align: center;
   width: 100vw;
-  height: auto;
+  height: 20vh;
   background-color: rgba(133, 144, 168, 0.756);
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 
@@ -188,7 +195,7 @@
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  padding: 0em 5em;
+  padding: 0em 1em;
   color: #ffffff;
   width: 100%;
   bottom: 0; 
